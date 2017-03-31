@@ -1,8 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { BrowserRouter, HashRouter, Route, Redirect } from 'react-router-dom';
-var loginService = require('./loginsvc');
+var loginService = require('./../services/loginsvc');
 const login = new loginService.LoginService();
-// const jwt = require('jsonwebtoken');
 
 class IndexComponent extends Component {
   state = {
@@ -28,8 +27,7 @@ class IndexComponent extends Component {
         }else{
           console.log("success")
           // this.props.location.state = {from: {pathname: '/home'}};
-          // token = jwt.sign({login: this.state.loginData.username}, 'super.super.secret.shhh', {expiresIn: 60});
-          // localStorage.setItem('xyzcba', token);
+          localStorage.setItem('xyzcba', res.body.data.token);
           this.setState({ redirectToReferrer: true, loggedIn: true });
           // return (
           //   <Redirect to={{from: {pathname: "/home"}}}/>

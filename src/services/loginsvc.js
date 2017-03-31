@@ -1,15 +1,4 @@
-// var nocache = require('superagent-no-cache');
 var request = require('superagent');
-// var prefix = require('superagent-prefix')('/static');
-
-// request
-//   .post('/some-url')
-//   .query({ action: 'edit', city: 'London' }) // query string
-//   .use(prefix) // Prefixes *only* this request
-//   .use(nocache) // Prevents caching of *only* this request
-//   .end(function(err, res){
-//     // Do something
-//   });
 
 export class LoginService{
   constructor(){

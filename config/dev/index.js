@@ -8,7 +8,7 @@ let config = Object.assign(defaultConfig.config(), {
     entry: [
         'webpack-dev-server/client?http://localhost:' + defaultConfig.port,
         'webpack/hot/only-dev-server',
-        './src/index'
+        './src/app/index'
     ],
     cache: true,
     devtool: 'source-map',

@@ -13,6 +13,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
+    "jwt-decode": "^2.2.0",
     "normalize.css": "^5.0.0",
     "open": "0.0.5",
     "superagent": "^3.5.2",
