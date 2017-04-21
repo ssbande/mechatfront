@@ -1,0 +1,31 @@
+.navbar.navbar-default.navbar-fixed-top {
+	border-bottom: 0;
+}
+
+.navbar.navbar-default.navbar-fixed-bottom {
+	border-top: 0;
+}
+
+.sideBarHeader {
+	background-color: whitesmoke; 
+	height: 50px; 
+	padding: 15px 20px;
+}
+
+.bodyHeader {
+	background-color: white; 
+	height: 50px; 
+	padding: 15px 20px;
+}
+
+.sideBarFooter {
+	background-color: whitesmoke; 
+	height: 50px; 
+	padding: 15px 20px;
+}
+
+.bodyFooter {
+	background-color: white; 
+	height: 50px; 
+	padding: 15px 20px;
+}
