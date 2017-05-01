@@ -1,10 +1,10 @@
 import 'normalize.css/normalize.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap - Copy.css';
 
 import React, { Component } from 'react';
 // import Header from './header';
 // import Sidebar from './sidebar';
-import { Grid, Row, Col } from 'react-bootstrap';
+// import { Grid, Row, Col } from 'react-bootstrap';
 var commonService = require('./../services/commonsvc');
 const svc = new commonService.CommonService();
 
@@ -14,6 +14,10 @@ class AppComponent extends Component {
     componentWillMount() {
         console.log('props from constructor: ', this.props);
         this.onlineUsers = this.props.location.onlineUsers;
+    }
+
+    onClick(username) {
+        console.log('user clicked on: ' + username);
     }
 
     render() {
@@ -46,9 +50,17 @@ class AppComponent extends Component {
                   <div className="row" style={{padding: '8px'}}>
                     <div className="col-md-2" id="sidebar">
                         <div>
+                          {
+                            x.map((s) => {
+                                return <div key = {s}>Sidebar Content {s}</div>
+                            })
+                          }
+                        </div>
+                        <hr/>
+                        <div>
                             {
                                 this.onlineUsers.map((user) => {
-                                    return <div key = { user.id } > { user.name } < /div>
+                                    return <div key = { user.id } > <a onClick={this.onClick(user.name)}>{ user.name }</a> < /div>
                                 })
                             }
                         </div>
